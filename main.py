@@ -5,6 +5,7 @@ DEFAULT_DEFENCE = 10
 DEFAULT_STAMINA = 80 
 
 class Character:
+<<<<<<< HEAD
     BRIEF_DESC_CHAR_CLASS = 'отважный любитель приключений'
     RANGE_VALUE_ATTACK = (1, 3)
     RANGE_VALUE_DEFENCE = (1, 5)
@@ -101,3 +102,38 @@ def choice_char_class(char_name: str) -> Character:
                                'или любую другую кнопку, '
                                'чтобы выбрать другого персонажа ').lower()
     return char_class
+=======
+    def __init__(self, name, damage, protection, special_skill, special_values) -> None:
+        self.name = name
+        self.damage = damage
+        self.protection = protection
+        self.special_skill = special_skill
+        self.special_values = special_values
+        pass
+
+    def attack(self):
+        return (f'{self.name} нанёс урон противнику равный '
+                f'{5 + randint(self.damage)}')
+        
+
+    def defence(self):
+        return (f'{self.name} блокировал {10 + randint(self.protection)} урона')
+
+    def special(self):
+        return (f'{self.name} применил специальное умение '
+                f'«{self.special_skill} {self.special_values}»')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> ec0c3cbd4e945b0d5a9f65bc89e025021fc90db5
